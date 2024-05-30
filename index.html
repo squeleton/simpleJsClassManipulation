@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <form>
+            <fieldset><legend>Agregar Persona</legend>
+            <input type="text" id="p-rut" name="p-rut" placeholder="Rut: "><br>
+            <input type="text" id="p-nom" name="p-nom" placeholder="Nombre: "><br>
+            <input type="text" id="p-ape" name="p-ape" placeholder="Apellido: "><br>
+            <input type="number" id="p-edad" name="p-edad" placeholder="Edad: " min="18"><br>
+            <input type="text" id="p-est" name="p-est" placeholder="Estatura: eje:1.70"><br>
+            <input type="text" id="p-peso" name="p-peso" placeholder="Peso: "><br>
+            <input type="text" id="p-esp" name="p-esp" placeholder="Rut especialista: "><br>
+            
+            <input class="bo" type="button" value="Agregar" onclick="addPersona()">
+        </fieldset>
+        </form>
+        <form>
+            <fieldset><legend>Buscar por Rut</legend>
+                <input type="text" id="b-rut" name="b-rut" placeholder="Buscar">
+                <input class="bo" type="button" value="Buscar" onclick="findPersona()">
+            </fieldset>
+        </form>
+        <div >
+            <span id="r-rut"></span>
+            <span id="r-nombre"></span>
+            <span id="r-edad"></span>
+            <span id="r-estatura"></span>
+            <span id="r-peso"></span>
+            <span id="r-imc"></span>
+            <span id="r-estado"></span>
+            <span id="r-esp"></span>
+        </div>
+    </main>
+    <div class="contenido" id="tabla-container">
+        <table id="tabla-personas">
+            <thead>
+                <tr>
+                    <th class="green">Rut</th>
+                    <th class="green">Nombre</th>
+                    <th class="green">Apellido</th>
+                    <th class="green">Edad</th>
+                    <th class="green">Estatura</th>
+                    <th class="green">Peso</th>
+                    <th class="green">IMC</th>
+                    <th class="green">Estado</th>
+                    <th class="green">Especialista</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-personas">
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
